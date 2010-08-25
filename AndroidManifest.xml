@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="1" android:versionName="1.0"
+    package="com.funkypantssoftware.communique" xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:icon="@drawable/appicon" android:label="@string/app_name" android:theme="@style/FPWhite">
+        <activity android:label="@string/app_name" android:name=".MainActivity"/>
+        <activity android:name=".SermonActivity"/>
+        <activity android:name=".NewsActivity"/>
+        <activity android:name=".MediaActivity"/>
+        <activity android:name=".ConnectActivity"/>
+        <activity android:name=".SermonDetailActivity"/>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewsDetailActivity"/>
+    </application>
+    <uses-sdk android:minSdkVersion="7"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

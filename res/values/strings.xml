@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">Communique</string>
+    
+    <!-- Feed URL's -->
+    <string name="url_sermon_feed">http://www.funkypantssoftware.com/POPMobileRSS.php?type=sermon</string>
+    <string name="url_media_feed">http://www.funkypantssoftware.com/POPMobileRSS.php?type=media</string>
+    <string name="url_news_feed">http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=poplc</string>
+    
+    <!--Tabs -->
+    <string name="tab_0">Messages</string>
+    <string name="tab_1">Media</string>
+    <string name="tab_2">News</string>
+    <string name="tab_3">Connect</string>
+    
+    <!-- Feed fields -->
+    <string name="xml_link">link</string>
+    <string name="xml_title">title</string>
+    <string name="xml_thumbnail">thumbnail</string>
+    <string name="xml_pubDate">pubDate</string>
+    <string name="xml_description">description</string>
+    <string name="xml_item">item</string>
+    <string name="xml_audioLink">audioLink</string>
+    
+    <!-- Connect Tab strings -->
+    <string name="connect_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non euismod nisi. Nulla blandit sollicitudin convallis. Vestibulum ornare sem id justo varius accumsan. Donec mattis neque sit amet mauris pretium ac mattis nisl congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque justo dolor, sollicitudin non fermentum a, sollicitudin sit amet leo. Nulla in dui viverra sapien ornare vulputate a sed mi. Vestibulum vehicula viverra arcu nec ornare. Suspendisse potenti. Vestibulum auctor tellus eget justo semper a tristique ipsum hendrerit. Etiam posuere quam eu mauris vestibulum eget laoreet arcu suscipit. Mauris tincidunt ipsum et ante viverra a posuere felis elementum. Cras interdum sollicitudin pellentesque. Quisque auctor, tortor cursus aliquet lacinia, arcu leo egestas felis, id blandit orci orci quis ante. Aliquam dignissim ligula sit amet erat cursus venenatis. Nullam nec diam id purus malesuada sodales eu vitae est. Nulla semper arcu quis libero egestas posuere. Morbi nec purus arcu. Praesent convallis tellus eget nisi pharetra dignissim.</string>
+    <string name="connect_facebook_url">http://m.facebook.com/kleinke49</string>
+    <string name="connect_twitter_url">http://www.twitter.com/kleinke49</string>
+    <string name="connect_email">kleinke49@email.com</string>
+    <string name="connect_phone">214-282-0748</string>
+    <string name="connect_website">http://www.fellowshiptech.com</string>
+    <string name="connect_address">6363 N. State Hwy 161, Suite 200, Irving, TX 75038</string>
+    
+    
+</resources>
