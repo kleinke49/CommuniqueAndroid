@@ -1,6 +1,7 @@
 package com.funkypantssoftware.communique;
 
 import com.funkypantssoftware.communique.Util.MessageAdapter;
+import com.funkypantssoftware.communique.Util.Util;
 import com.funkypantssoftware.communique.Util.XML.Message;
 
 import android.app.ListActivity;
@@ -28,13 +29,19 @@ public class MediaActivity extends ListActivity {
 		this.mList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
 				try {
-					Intent tostart = new Intent(Intent.ACTION_VIEW);
+					String url = "";
 					final Message message = (Message) view.getTag();
-					tostart.setDataAndType(Uri.parse(message.getLink().toString()), "video/*");
-					startActivity(tostart);
+					if (MediaActivity.this.getString(R.string.use_vimeo).equals("1")) {
+						url = Util.GetVimeoStreamURL(message.getLink().toString());
+					}
+					else {	
+						url = message.getLink().toString();
+					}
+					Intent tostart = new Intent(Intent.ACTION_VIEW);
 					
+					tostart.setDataAndType(Uri.parse(url), "video/*");
+					startActivity(tostart);
 				} catch (final Exception e) {
-					//TODO: Handle error
 					System.out.println(e.toString());
 				}
 			}

@@ -31,5 +31,7 @@
     <string name="connect_website">http://www.fellowshiptech.com</string>
     <string name="connect_address">6363 N. State Hwy 161, Suite 200, Irving, TX 75038</string>
     
+    <!--  Settings -->
+    <string name="use_vimeo">1</string>
     
 </resources>

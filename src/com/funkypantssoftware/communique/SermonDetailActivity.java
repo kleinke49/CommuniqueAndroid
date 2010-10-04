@@ -1,5 +1,6 @@
 package com.funkypantssoftware.communique;
 
+import com.funkypantssoftware.communique.Util.Util;
 import com.funkypantssoftware.communique.Util.XML.Message;
 
 import android.app.Activity;
@@ -48,8 +49,16 @@ public class SermonDetailActivity extends Activity {
 				
 				@Override
 				public void onClick(View arg0) {
+					String url = "";
+					
+					if (SermonDetailActivity.this.getString(R.string.use_vimeo).equals("1")) {
+						url = Util.GetVimeoStreamURL(message.getLink().toString());
+					}
+					else {	
+						url = message.getLink().toString();
+					}
 					Intent tostart = new Intent(Intent.ACTION_VIEW);
-					tostart.setDataAndType(Uri.parse(message.getLink().toString()), "video/*");
+					tostart.setDataAndType(Uri.parse(url), "video/*");
 					startActivity(tostart);
 				}
 			});

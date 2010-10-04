@@ -83,4 +83,26 @@ public class Util {
         }
         return ret;
 }
+
+	public static String GetVimeoStreamURL(final String url) {
+		String ret = "none";
+		
+		try {
+			URL formattedURL = new URL(url);
+			
+			HttpURLConnection request = (HttpURLConnection) formattedURL.openConnection();
+			request.addRequestProperty("Referer", "http://www.vimeo.com/m/");
+			request.setRequestMethod("GET");
+			
+			request.connect();
+			
+			request.getInputStream();
+			
+			ret = request.getURL().toString();
+		}
+		catch (Exception e) {
+			//TODO: HANDLE EXCEPTIONS
+		}
+		return ret;
+	}
 }
