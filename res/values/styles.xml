@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style name="FPWhite" parent="android:Theme.Light">
+	<style name="FPWhite" parent="android:Theme.Light">
 	<item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
-  </style>
-
-  <style name="WindowTitleBackground">     
+	</style>
+	
+	<style name="WindowTitleBackground">     
 	<item name="android:background">@color/titlebackgroundcolor</item>                   
-  </style>
+	</style>
+	 
+	<style name="DescriptionText" parent="@android:style/TextAppearance">
+	   <item name="android:textSize">14.5sp</item>
+	   <item name="android:paddingLeft">25dip</item> 
+	   <item name="android:paddingRight">25dip</item>
+	   <item name="android:paddingTop">15dip</item>
+	   <item name="android:paddingBottom">10dip</item>
+	   <item name="android:layout_gravity">center_vertical|right</item>
+	</style>
   
-  <style name="DescriptionText" parent="@android:style/TextAppearance">
-    <item name="android:textSize">14.5sp</item>
-    <item name="android:paddingLeft">25dip</item> 
-    <item name="android:paddingRight">25dip</item>
-    <item name="android:paddingTop">15dip</item>
-    <item name="android:paddingBottom">10dip</item>
-    <item name="android:layout_gravity">center_vertical|right</item>
-  </style>
+	<style name="Animations" />
+	
+	<style name="Animations.GrowFromBottom">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+	</style>
+	
+	<style name="Animations.GrowFromTop">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+	</style>
 
 </resources>

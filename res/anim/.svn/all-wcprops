@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/8/trunk/res/anim
+END
+grow_from_topleft_to_bottomright.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/8/trunk/res/anim/grow_from_topleft_to_bottomright.xml
+END
+shrink_from_bottomright_to_topleft.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/8/trunk/res/anim/shrink_from_bottomright_to_topleft.xml
+END
+shrink_from_top.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/res/anim/shrink_from_top.xml
+END
+grow_from_top.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/res/anim/grow_from_top.xml
+END
+grow_from_bottom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/res/anim/grow_from_bottom.xml
+END
+shrink_from_bottom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/res/anim/shrink_from_bottom.xml
+END

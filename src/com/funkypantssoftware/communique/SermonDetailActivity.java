@@ -74,6 +74,7 @@ public class SermonDetailActivity extends Activity {
 				public void onClick(View arg0) {
 					Intent tostart = new Intent(Intent.ACTION_VIEW);
 					tostart.setDataAndType(Uri.parse(message.getAudioLink().toString()), "audio/*");
+					tostart.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
 					startActivity(tostart);
 				}
 			});
