@@ -15,6 +15,5 @@ public class ResultHolder extends View {
 	public TextView Title;
 	public TextView Date;
 	public ImageView Thumbnail;
-
 }
 

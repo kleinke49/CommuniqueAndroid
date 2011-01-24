@@ -55,7 +55,7 @@ public class MessageAdapter extends BaseAdapter {
 				//get it when they press the item and pass it to the 
 				//sermon detail view.
 				rowLayout.setTag(m);
-				
+
 				holder.Title = (TextView)rowLayout.findViewById(R.id.title);
 				holder.Date = (TextView)rowLayout.findViewById(R.id.date);
 				holder.Thumbnail = (ImageView)rowLayout.findViewById(R.id.icon);

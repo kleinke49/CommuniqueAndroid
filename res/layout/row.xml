@@ -37,5 +37,5 @@
 		android:layout_below="@+id/title"	
 		android:layout_toRightOf="@+id/icon"
 		android:paddingLeft="2dip"		
-		android:singleLine="true"/>	
+		android:singleLine="true"/>
 </RelativeLayout>
