@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <version>1.0</version>
+    <groupId>com.funkypantssoftware.communique</groupId>
+    <artifactId>com-funkypantssoftware-communique-parent</artifactId>
+    <name>Communique parent</name>
+    <packaging>pom</packaging>
+
+    <issueManagement>
+        <url>https://github.com.funkypantssoftware.communique/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com.funkypantssoftware.communique</url>
+        <connection>scm:git:git://github.com.funkypantssoftware.communique.git</connection>
+        <developerConnection>scm:git:git@github.com.funkypantssoftware.communique.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <email>donn@donnfelker.com</email>
+            <name>Donn Felker</name>
+            <url>https://github.com/donnfelker</url>
+            <id>donnfelker</id>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>app</module>
+        <module>integration-tests</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <android.version>4.1.1.4</android.version>
+        <maven.resources.version>2.6</maven.resources.version>
+    </properties>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.6.0</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <sdk>
+                            <platform>16</platform>
+                        </sdk>
+                        <!--<undeployBeforeDeploy>true</undeployBeforeDeploy>-->
+                        <proguard>
+                            <skip>false</skip>
+                            <config>../proguard.cfg</config>
+                        </proguard>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>

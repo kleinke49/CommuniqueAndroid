@@ -1,0 +1,73 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    maven { url 'https://github.com/donnfelker/mvn-repo/raw/master/' }
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:18.0.+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.squareup.dagger:dagger:1.0.1'
+    compile 'com.squareup.dagger:dagger-compiler:1.0.1'
+    compile 'com.jakewharton:butterknife:1.3.2'
+    compile 'com.github.kevinsawicki:http-request:3.0'
+    compile 'com.actionbarsherlock:viewpagerindicator:2.4.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.kevinsawicki:android-pusher:0.6'
+    compile 'com.github.kevinsawicki:wishlist:0.9'
+    compile 'com.squareup:otto:1.3.4'
+    compile 'com.squareup.picasso:picasso:1.1.1'
+
+    instrumentTestCompile 'junit:junit:4.11'
+    instrumentTestCompile 'org.hamcrest:hamcrest-library:1.3'
+    instrumentTestCompile 'org.mockito:mockito-core:1.9.5'
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion '18.0.1'
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 18
+        versionCode 102
+        versionName '1.0'
+    }
+
+    // signingConfigs {
+        // release {
+            // storeFile file(System.getenv('ANDROID_KEYSTORE_PATH'))
+            // storePassword System.getenv('ANDROID_STORE_PASS')
+            // keyAlias System.getenv('ANDROID_KEY_ALIAS')
+            // keyPassword System.getenv('ANDROID_KEY_PASS')
+        // }
+    // }
+
+    buildTypes {
+        debug {
+            packageNameSuffix '.debug'
+            runProguard false
+            // zipAlign false // this is default for debug
+        }
+        release {
+            // runProguard true
+            // proguardFile '..\proguard.cfg'
+            // signingConfig signingConfigs.release
+            // zipAlign true // this is default for release
+            // testPackageName 'com.funkypantssoftware.communique.tests'
+            // testInstrumentationRunner 'android.test.InstrumentationTestRunner' // this is the default
+        }
+    }
+}
